@@ -1,0 +1,159 @@
+/* GENEL AYARLAR */
+body {
+  margin: 0;
+  font-family: "Segoe UI", sans-serif;
+  background-color: #faf7fb; /* Soft pembe-beyaz zemin */
+  color: #4a3f55; /* Yumuşak mor-gri yazı */
+}
+
+/* NAVBAR */
+.navbar {
+  display: flex; /* Logo ve menüyü yatay hizalamak için */
+  justify-content: space-between;
+  align-items: center;
+  padding: 15px 30px;
+  background-color: #e6c7dd; /* Soft pembe */
+}
+
+.logo {
+  color: #4a3f55;
+}
+
+.nav-links {
+  display: flex; /* Menü linklerini yan yana almak için */
+  list-style: none;
+  gap: 20px;
+}
+
+.nav-links a {
+  color: #4a3f55;
+  text-decoration: none;
+  font-weight: 500;
+}
+
+/* NAVBAR MOBİL */
+@media (max-width: 600px) {
+  .nav-links {
+    flex-direction: column; /* Mobilde linkleri alt alta almak için */
+  }
+}
+
+/* HERO */
+.hero {
+  display: flex; /* Yazı ve görseli masaüstünde yan yana almak için */
+  gap: 40px;
+  padding: 50px;
+  align-items: center;
+}
+
+.hero-text h2 {
+  color: #9b6fa6; /* Lavanta mor */
+}
+
+.hero-image img {
+  max-width: 100%;
+  border-radius: 16px; /* Yumuşak görünüm */
+}
+
+/* HERO MOBİL */
+@media (max-width: 768px) {
+  .hero {
+    flex-direction: column; /* Mobilde resim üstte yazı altta */
+    text-align: center;
+  }
+}
+
+/* SERVICES */
+.services h2 {
+  text-align: center;
+  color: #9b6fa6;
+}
+
+.service-grid {
+  display: grid; /* Kartları kolon sistemine sokmak için */
+  grid-template-columns: repeat(3, 1fr); /* Masaüstünde 3 sütun */
+  gap: 25px;
+  padding: 30px;
+}
+
+.card {
+  background-color: #ffffff;
+  padding: 15px;
+  text-align: center;
+  border-radius: 16px;
+  box-shadow: 0 8px 20px rgba(0, 0, 0, 0.05); /* Soft gölge */
+}
+
+.card img {
+  width: 100%; /* Kart genişliğine uydurmak için */
+  height: 160px;
+  object-fit: cover; /* Resmi bozmadan kırpmak için */
+  border-radius: 12px;
+  margin-bottom: 10px;
+}
+
+.card p {
+  color: #6b4f7a;
+  font-weight: 500;
+}
+
+/* TABLET */
+@media (max-width: 992px) {
+  .service-grid {
+    grid-template-columns: repeat(2, 1fr); /* Tablet için 2 sütun */
+  }
+}
+
+/* MOBİL */
+@media (max-width: 600px) {
+  .service-grid {
+    grid-template-columns: 1fr; /* Mobilde tek sütun */
+  }
+}
+
+/* FOOTER */
+footer {
+  text-align: center;
+  padding: 50px;
+}
+
+.price-btn {
+  background: linear-gradient(
+    135deg,
+    #e6c7dd,
+    #c9a7e0
+  ); /* Pembe-mor geçiş */
+  color: #4a3f55;
+  padding: 14px 30px;
+  text-decoration: none;
+  border-radius: 30px;
+  font-weight: 600;
+}
+
+/* TASK 2.2 PRICING */
+.pricing {
+  display: flex; /* Fiyat kartlarını yan yana almak için */
+  justify-content: center;
+  gap: 30px;
+  padding: 60px;
+  flex-wrap: wrap; /* Mobilde alt satıra düşmeleri için */
+}
+
+.price-box {
+  background-color: #ffffff;
+  padding: 35px;
+  width: 260px;
+  text-align: center;
+  border-radius: 20px;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.06);
+}
+
+.price-box h3 {
+  color: #9b6fa6;
+}
+
+.price-box span {
+  font-size: 22px;
+  font-weight: bold;
+  color: #c16dbf; /* Soft pembe-mor vurgu */
+}
